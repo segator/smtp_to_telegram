@@ -60,8 +60,9 @@ jobs:
     
       - name: Copy build-artifacts
         uses: skx/github-action-publish-binaries@master
-        with:
+        env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        with:
           args: "./dist/*"
 
 
